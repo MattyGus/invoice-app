@@ -66,7 +66,7 @@ function App() {
       </button>
       
 
-      <h2>invoices:</h2>
+      <h2>računi:</h2>
       {invoices.map((inv, index) => (
         <div key={index}>
          <p><b>{inv.client}</b></p>
