@@ -43,16 +43,12 @@ app.get("/invoices", (req, res) => {res.json(invoices);});
 app.listen(3000, () => {console.log("Server running on http://localhost:3000");});
 
 // DELETE 
-app.delete("/invoices/:id", (req, res) => {
-    const id = parseInt(req,URLSearchParams.id);
+app.delete("/invoices/:index", (req, res) => {
+    const index = parseInt(req.params.index);
+    
 
-    invoices = invoices.filter(invoice => invoice.id !== id);
-
-    res.json({
-        message: "Invoice deleted",
-        remaining: invoices.length
+    invoices.splice(index, 1);
+    
+    res.json({message: "Invoice delete"
     });
 });
-
-//START SERVER 
-app.listen(3000, () => {console.log("Server running on http://localhost:3000");});
