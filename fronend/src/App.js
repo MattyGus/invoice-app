@@ -68,7 +68,7 @@ function App() {
 
       <h2>računi:</h2>
       {invoices.map((inv, index) => (
-        <div key={index}>
+        <div key={index} style= {{border: "1px solid #ccc", padding: 10, margin: 10}}>
          <p><b>{inv.client}</b></p>
          <p>{inv.amount} €</p>
          <p>{inv.description}</p>
