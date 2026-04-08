@@ -73,7 +73,8 @@ function App() {
          <p>{inv.amount} €</p>
          <p>{inv.description}</p>
          <hr />
-    </div>
+      <button onClick={ () => deleteInvoice(index)}> Delete 
+</button>
       ))}
    </div>
   );
