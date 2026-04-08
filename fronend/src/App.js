@@ -70,7 +70,7 @@ function App() {
       {invoices.map((inv, index) => (
         <div key={index}>
          <p><b>{inv.client}</b></p>
-         <p>{inv.amount}</p>
+         <p>{inv.amount} €</p>
          <p>{inv.description}</p>
          <hr />
     </div>
